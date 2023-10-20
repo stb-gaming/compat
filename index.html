@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>STB Compatability checker</title>
+	<link rel="stylesheet" href="https://stb-gaming.github.io/high-scores/assets/css/style.css">
+	<link rel="stylesheet" href="https://stb-gaming.github.io/high-scores/assets/css/hs.css">
+	<style>
+		td::before {
+			content: attr(class);
+		}
+		.yes {
+			background-color: green;
+		}
+		.no {
+			background-color: red;
+		}
+		[colspan] {
+			font-weight: bold;
+			background-color: rgba(224, 224, 224, 0.1)
+		}
+	</style>
+</head>
+<body>
+<main>
+	<div class="container width-fit">
+		<div class="panel">
+			<div class="panel-body">
+
+				<table>
+					<thead>
+						<th>Feature</th>
+						<th>Details</th>
+						<th>Compatable</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Web Browser</td>
+							<td>The ability to show web pages</td>
+							<td class="yes"></td>
+						</tr>
+						<tr>
+							<td colspan="3">Languages</td>
+						</tr>
+						<tr>
+							<td>JavaScript</td>
+							<td>Has Javascript Functionality</td>
+							<td id="js" class="no"></td>
+						</tr>
+						<tr>
+							<td>WebAssembly</td>
+							<td>The denki games use Webassemble and emscripten</td>
+							<td id="wasm" class="no"></td>
+						</tr>
+						<tr>
+							<td colspan="3">Types</td>
+						</tr>
+						<tr>
+							<td>Uint8Array</td>
+							<td></td>
+							<td id="uint8" class="no"></td>
+						</tr>
+						<tr>
+							<td>Uint16Array</td>
+							<td></td>
+							<td id="uint16" class="no"></td>
+						</tr>
+						<tr>
+							<td>Uint32Array</td>
+							<td></td>
+							<td id="uint32" class="no"></td>
+						</tr>
+						<tr>
+							<td colspan="3">Functionality</td>
+						</tr>
+						<tr>
+							<td>Fetch API</td>
+							<td></td>
+							<td id="fetch" class="no"></td>
+						</tr>
+						<tr>
+							<td colspan="3">Input</td>
+						</tr>
+						<tr>
+							<td>Keyboard API</td>
+							<td>Input API</td>
+							<td id="keyboard" class="no"></td>
+						</tr>
+						<tr>
+							<td>Gamepad API</td>
+							<td>Input API</td>
+							<td id="gamepad" class="no"></td>
+						</tr>
+						<tr>
+							<td>Web MIDI API</td>
+							<td>Exclusive to playing gamings using portal</td>
+							<td id="midi" class="no"></td>
+						</tr>
+						<tr>
+							<td colspan="3">Graphics</td>
+						</tr>
+						<tr>
+							<td>HTML5 Canvas</td>
+							<td>The ability to show programatically generated graphics</td>
+							<td id="canvas" class="no"></td>
+						</tr>
+						<tr>
+							<td>Canvas API</td>
+							<td>defaut 2d canvas context</td>
+							<td id="2d" class="no"></td>
+						</tr>
+						<tr>
+							<td>WebGL (OpenGL ES 2.0)</td>
+							<td>Graphics API</td>
+							<td id="webgl" class="no"></td>
+						</tr>
+						<tr>
+							<td>WebGL2 (OpenGL ES 3.0)</td>
+							<td>Graphics API</td>
+							<td id="webgl2" class="no"></td>
+						</tr>
+						<tr>
+							<td>WebGPU API</td>
+							<td>Graphics API</td>
+							<td id="webgpu" class="no"></td>
+						</tr>
+
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</main>
+</body>
+</html>
